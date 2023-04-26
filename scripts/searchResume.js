@@ -16,23 +16,23 @@ function fetchData(val) {
       const inputValue = document
         .getElementById("searchResume")
         .value.toLowerCase();
-        const filteredData = {
-            ...data,
-            resume: data.resume.filter((item) => {
-              const appliedFor = item.basics.AppliedFor.toLowerCase();
-              return appliedFor.includes(inputValue);
-            }),
-          };if(filteredData.resume[0]){
+      const filteredData = {
+        ...data,
+        resume: data.resume.filter((item) => {
+          const appliedFor = item.basics.AppliedFor.toLowerCase();
+          return appliedFor.includes(inputValue);
+        }),
+      }; if (filteredData.resume[0]) {
 
-            resume.classList.remove("hidden");            
-            noResume.classList.add("hidden");
-            navigationHandler(filteredData);
-          } else {
-            document.getElementById("next").classList.add("hidden");
-            document.getElementById("previous").classList.add("hidden");           
-            resume.classList.add("hidden");            
-            noResume.classList.remove("hidden");
-          }     
-         
+        resume.classList.remove("hidden");
+        noResume.classList.add("hidden");
+        navigationHandler(filteredData);
+      } else {
+        document.getElementById("next").classList.add("hidden");
+        document.getElementById("previous").classList.add("hidden");
+        resume.classList.add("hidden");
+        noResume.classList.remove("hidden");
+      }
+
     });
 }
