@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Page</title>
+    <link rel="stylesheet" href="../css/resume-page.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div class="keyword-input">
+            <button type="button" class="Previous" id="previous" onclick="onPrevious()">Previous</button>
+            <input type="text" id="searchResume" name="searchResume"
+                placeholder="Search for keywords to filter the resumes">
+            <button type="button" class="Next" id="next" onclick="onNext()">Next</button>
+        </div>
+
+        <div id="noResult" class="no-results">
+            <img src="../assets/images.png" alt="Sad emoji" class="no-result-img">
+            <p class="no-result-text">No such results found</p>
+        </div>
+
+
+
+        <div class="resume" id="resume">
+            <div class="top-section">
+                <div class="top-info">
+                    <p><span class="name">hi</span></p>
+                    <p><span class="AppliedFor"></span></p>
+                </div>
+
+                <div class="image"><img src="../assets/user.jpg" alt="User">
+                </div>
+            </div>
+            <div class="Personal-info-grid">
+
+                <div class="person-info-div">
+                    <h3 class="Personal-info">Personal Information</h3>
+                    <ul class="personal-info-list"></ul>
+                </div>
+
+
+                <div class="technical-skills-div">
+                    <h3 class="Personal-info">Technical Skills</h3>
+                    <ul class="technical-skills-list"></ul>
+                </div>
+
+
+                <div class="hobbies-div">
+                    <h3 class="Personal-info">Hobbies</h3>
+                    <ul class="hobbies-list"></ul>
+                </div>
+
+            </div>
+            <div class="content">
+
+                <h2 class="headings">Work Experience in previous company</h2>
+                <div class="workexperience">
+                    <p><b>Company Name: </b><span class="CompanyName"></span></p>
+                    <p><b>Position: </b><span class="Position"></span></p>
+                    <p><b>Start Date: </b><span class="StartDate"></span></p>
+                    <p><b>End Date: </b><span class="EndDate"></span></p>
+                    <p><b>Summary: </b><span class="Summary"></span></p>
+                </div>
+
+
+                <h2 class="headings">Projects</h2>
+                <div class="projects">
+                    <p><b><span class="ProjectName"></span></b><span class="ProjectNameDesc"></span></p>
+                </div>
+
+
+                <h2 class="headings">Education</h2>
+                <div class="education">
+                    <ul>
+                        <li><b>UG: </b><span class="UG"></span></li>
+                        <li><b>PU: </b><span class="PU"></span></li>
+                        <li><b>HS: </b><span class="HS"></span></li>
+                    </ul>
+
+                </div>
+
+                <h2 class="headings">Internship</h2>
+                <div class="internship">
+                    <ul>
+                        <li><b>Company Name:</b><span class="ICompanyName"></span></li>
+                        <li><b>Position:</b><span class="IPosition"></span></li>
+                        <li><b>Start Date:</b><span class="IStartDate"></span></li>
+                        <li><b>End Date:</b><span class="IEndDate"></span></li>
+                        <li><b>Summary:</b><span class="ISummary"></span></li>
+                    </ul>
+
+                </div>
+
+                <h2 class="headings">Achievements</h2>
+                <div class="achievements">
+                    <ul><span class="ASummary"></span></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../scripts/utils.js"></script>
+<script src="../scripts/resume-page.js"></script>
+<script>window.onload = fetchEverything() </script>
+<script src="../scripts/searchResume.js"></script>
+
+</html>

@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-items: center;
+
+  font-family: "montserrat", sans-serif;
+}
+
+.app-container {
+  display: grid;
+  grid-template-areas:
+    "main"
+    "resume";
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.keyword-input {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 70%;
+  margin-left: 100px;
+  padding: 20px;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 70%;
+  height: 100%;
+  font-size: 21px;
+  color: black;
+}
+input:focus {
+  background-color: #d1f6f0;
+}
+
+.Next,
+.Previous {
+  padding-left: 12px;
+  width: 100px;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+.Next:hover,
+.Previous:hover {
+  background-color: lightgray;
+}
+
+.resume {
+  grid-area: resume;
+  width: 70%;
+
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  grid-template-columns: 300px auto;
+
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.top-section {
+  grid-area: header;
+  display: grid;
+  grid-template-areas: "info photo";
+
+  grid-template-columns: 80% 20%;
+  justify-content: center;
+  background-color: #d1f6f0;
+}
+.top-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 8px;
+  margin-left: 25%;
+  margin-top: 1vh;
+}
+.image {
+  grid-area: photo;
+  margin-left: 20%;
+  margin-top: 10%;
+  height: 60%;
+  width: 50%;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  grid-area: content;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.Personal-info-grid {
+  grid-area: sidebar;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #f8e2e2;
+  width: 80%;
+  min-height: 20%;
+  max-height: 52%;
+  padding: 5px;
+  border: none;
+}
+.Personal-info {
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  background-color: #a7a7a7;
+}
+.personal-info-list,
+.technical-skills-list,
+.hobbies-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.person-info-div,
+.technical-skills-div,
+.hobbies-div {
+  margin-top: 2px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.personal-info-list p,
+.technical-skills-list p,
+.hobbies-list p {
+  margin: 2px;
+  padding: 0;
+}
+
+.headings {
+  margin-left: 20px;
+}
+.name {
+  font-weight: bold;
+  font-size: xxx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AppliedFor {
+  font-weight: bold;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-results {
+  grid-area: resume;
+
+  display: grid;
+  grid-template-areas: "image text";
+  grid-template-columns: 40% 60%;
+
+  width: 1000px;
+  height: 300px;
+  margin-left: 35%;
+  margin-top: 20%;
+
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.hidden {
+  display: none;
+}
+
+.no-result-text {
+  grid-area: text;
+
+  margin-top: 100px;
+  font-size: 40px;
+}
+
+.no-result-img {
+  grid-area: image;
+  margin-top: 10%;
+  margin-left: 20%;
+}
+
+.workexperience {
+  margin-left: 50px;
+  text-align: justify;
+}
+
+.projects {
+  margin-left: 50px;
+  text-align: justify;
+}
+
+.education {
+  margin-left: 50px;
+}
+
+.internship {
+  margin-left: 50px;
+}
+
+.achievements {
+  margin-left: 50px;
+}
+
+.internship ul,
+.education ul,
+.achievements ul {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-container {
+    grid-template-areas:
+      "main"
+      "resume";
+    grid-template-rows: auto auto;
+    justify-items: center;
+    width: 90%;
+  }
+
+  .keyword-input {
+    width: 100%;
+    margin-left: 13%;
+    padding: 10px;
+  }
+
+  input {
+    width: 60%;
+    font-size: 16px;
+  }
+
+  .Next,
+  .Previous {
+    padding-left: 3px;
+    width: 80px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+
+  .resume {
+    width: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    margin-left: 10%;
+    margin-bottom: 10%;
+  }
+
+  .top-section {
+    grid-template-areas: "info photo";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    margin-bottom: 10px;
+  }
+
+  .top-info {
+    display-area: info;
+    margin-left: 10%;
+    margin-top: 0;
+    row-gap: 2%;
+  }
+
+  .image {
+    display-area: photo;
+
+    height: 48%;
+    width: 40%;
+  }
+
+  .Personal-info-grid {
+    width: 100%;
+    max-height: 40%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .Personal-info {
+    margin: 2px;
+    font-size: 14px;
+  }
+
+  .personal-info-list,
+  .technical-skills-list,
+  .hobbies-list {
+    margin-top: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  input {
+    font-size: 12px;
+  }
+
+  .Next,
+  .Previous {
+    width: 80px;
+    font-size: 12px;
+  }
+
+  .Personal-info {
+    margin: 1px;
+    font-size: 12px;
+  }
+}
